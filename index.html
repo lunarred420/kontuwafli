@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Compact Text Box with Image</title>
+  <title>Compact Text Box with Images</title>
   <style>
     body {
       display: flex;
@@ -21,27 +21,38 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(5px);
       text-align: center;
-      max-width: 400px;
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+      grid-gap: 15px; /* Space between the images */
     }
 
     .text-box img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
-      margin-bottom: 15px;
+      object-fit: cover;
     }
 
     h1 {
       font-size: 2.5rem;
       color: #fff;
       margin: 0;
+      grid-column: span 2; /* Title spans across both columns */
     }
   </style>
 </head>
 <body>
   <div class="text-box">
-    <img src="https://bydash.com/cdn/shop/articles/20230327191314-Rise_2520Waffle_Chocolate_2520Waffles.jpg?v=1679944418&width=1920" alt="Placeholder Image">
     <h1>Kon tu wafli</h1>
+    <!-- Image 1 -->
+    <img src="https://media-hosting.imagekit.io/408fdd6e3ecc4d62/.png?Expires=1840224423&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IjMvX7ekhlyHKu6wXo7cW5rtih4TGi7p7cKqBDtOy6ZcqlqlholejHxNf3zNTQAvw9Tz9jFVmc45Yvtquiq6q53JI3z-DKouHRHhVCcapzEJbLsd7W67TGJSy9vnJu5G0-mngGV3tcVV0Uo-iv5xbO1mQu1aoVDEVpsw07H1SLH9hekolxYn8wZeNYd4cExLHxj8s2OoGGuc5HiMGBa8UHvX1JM-oDiydMMAv4Hm63EDpkd38Grvrylbjdt36TKh1VgmnRAZEyJ17liN5dgJVz3tuiA51wxFOqG7SHyhYmzJEsoAzSltuzhTNuejXV780VfU9X8KYXfxHjsNEmCXSQ__" alt="Waffle Image 1">
+    <!-- Image 2 -->
+    <img src="https://media-hosting.imagekit.io/be692f3837584851/2.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=v4t3PZ6vSRhaQXGm9QBftmuSgsfSeQFqyjBoszzRbgd0E0QoNog164jadpQtyEdi57jHYhH8D29l7rDjkMSU0hriQgYj6QOQrD15GHERmL6HoMDFuObQS8u6CzQkQcoPxWV68PWRYP8K8uGvy-Lio7ylABZjPoZ7pmpeMS2nev0duY4ke7ii8GbGQ4aRXuOBxn6p9-fODR1~QWqnIcjFz0dhEHU-9CFkxDqPetEchzqYvaKml1TeHkyKMt8eZ3R3DoWQPD5foxUu6SoSSTkRe5e9WfUDsXGpeJvBvQBOO4eaTcUTNmAWWpLtSImvBDFedurW91SxsbFXJd0XXkpdAg__" alt="Waffle Image 2">
+    <!-- Image 3 -->
+    <img src="https://media-hosting.imagekit.io/6fde1a84ac1f49bb/3.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TwfVTs~bkBvUJvQOv5pTOuRMokzPG9CpX7vxVV4~5jqEj8ICcLdnp3bFk-i1XulhOLGcM4x0CvYCS4w8EJVwClIKFzfbJQT-KH8z24t--4szOtCGLeF1amhTUcNTkHTWd7rISOTos4X-IofYxDxy7LceSsolvttQI~0Uu6ZUttDFDeMWBsTjG3DPKRSEzeRHsrKO70ALUXTEfIWi4FzaeH81hBHFB2AIVSQKy2osU4KZDKT21CljVUHP3A0~bwTqakNA9QoeovgU73tQtN4OpEHw2KHoDNqD6FqGvywpzIAtIxh71u1MtfDhgtizeNe2Us05cCMaeZTGKU~Y6nPuVg__" alt="Waffle Image 3">
+    <!-- Image 4 -->
+    <img src="https://media-hosting.imagekit.io/4fcfa07d77d043e8/4.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hgYUUU2XgCKrl9Lqnwl9-TIZiFgzJdnL1R3mkH-uPcJjIPdApNp~8bWbFddnkV5klTTMqVz~AEUtBpYE5LLbJduQlO1ECJUN4hgZA3BqX0ROOCxtYMHdOKEn~wj8C4DDmzz8uRQ4bb5TITwfKB9NGzqcrmjIH7iV-~mTgh2kf6G01QdA6EjYEfe6wpgBQggNh~0YeQpn3eXDGnMK7bflD66nlccjPOC7TFG~oO2lifCklSGG2mAaDNKNqB9FDwxb4wDHeOdmjK6eFHIqWp2~WlsyQRsfShpYjcvJyj0XbTAtWwWE68AYqmpcW4AX~znbPs7OMLCpiXJ77~6Redqm0g__" alt="Waffle Image 4">
   </div>
 </body>
 </html>
