@@ -2,57 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Compact Text Box with Images</title>
+  <title>Idgafology</title>
   <style>
     body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at top left, #2c003e, #000000);
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, black, red);
+      position: relative;
+      background-color: #0d001a;
+      background-image: 
+        radial-gradient(#ffffff22 1px, transparent 1px),
+        radial-gradient(#ffffff22 1px, transparent 1px);
+      background-size: 50px 50px;
+      background-position: 0 0, 25px 25px;
     }
 
     .text-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px 30px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
+      background: linear-gradient(to bottom right, #8b0055, #000000);
+      padding: 40px 50px;
+      border-radius: 25px;
+      box-shadow: 0 0 60px rgba(255, 0, 150, 0.7), 0 0 100px rgba(255, 0, 150, 0.4);
+      backdrop-filter: blur(10px);
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-      grid-gap: 15px; /* Space between the images */
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .text-box img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
-      border-radius: 10px;
+      border-radius: 12px;
       object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
     }
 
     h1 {
-      font-size: 2.5rem;
-      color: #fff;
-      margin: 0;
-      grid-column: span 2; /* Title spans across both columns */
+      font-size: 3.0rem;
+      color: #ffffff;
+      margin: 0 0 20px 0;
+      grid-column: span 2;
+      text-shadow: 2px 2px 12px rgba(255, 0, 150, 1), 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .corner-img {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
     }
   </style>
 </head>
 <body>
   <div class="text-box">
-    <h1>Ka tu wafli ;Dd</h1>
-    <!-- Image 1 -->
-    <img src="https://media-hosting.imagekit.io/408fdd6e3ecc4d62/.png?Expires=1840224423&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IjMvX7ekhlyHKu6wXo7cW5rtih4TGi7p7cKqBDtOy6ZcqlqlholejHxNf3zNTQAvw9Tz9jFVmc45Yvtquiq6q53JI3z-DKouHRHhVCcapzEJbLsd7W67TGJSy9vnJu5G0-mngGV3tcVV0Uo-iv5xbO1mQu1aoVDEVpsw07H1SLH9hekolxYn8wZeNYd4cExLHxj8s2OoGGuc5HiMGBa8UHvX1JM-oDiydMMAv4Hm63EDpkd38Grvrylbjdt36TKh1VgmnRAZEyJ17liN5dgJVz3tuiA51wxFOqG7SHyhYmzJEsoAzSltuzhTNuejXV780VfU9X8KYXfxHjsNEmCXSQ__" alt="Waffle Image 1">
-    <!-- Image 2 -->
-    <img src="https://media-hosting.imagekit.io/be692f3837584851/2.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=v4t3PZ6vSRhaQXGm9QBftmuSgsfSeQFqyjBoszzRbgd0E0QoNog164jadpQtyEdi57jHYhH8D29l7rDjkMSU0hriQgYj6QOQrD15GHERmL6HoMDFuObQS8u6CzQkQcoPxWV68PWRYP8K8uGvy-Lio7ylABZjPoZ7pmpeMS2nev0duY4ke7ii8GbGQ4aRXuOBxn6p9-fODR1~QWqnIcjFz0dhEHU-9CFkxDqPetEchzqYvaKml1TeHkyKMt8eZ3R3DoWQPD5foxUu6SoSSTkRe5e9WfUDsXGpeJvBvQBOO4eaTcUTNmAWWpLtSImvBDFedurW91SxsbFXJd0XXkpdAg__" alt="Waffle Image 2">
-    <!-- Image 3 -->
-    <img src="https://media-hosting.imagekit.io/6fde1a84ac1f49bb/3.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TwfVTs~bkBvUJvQOv5pTOuRMokzPG9CpX7vxVV4~5jqEj8ICcLdnp3bFk-i1XulhOLGcM4x0CvYCS4w8EJVwClIKFzfbJQT-KH8z24t--4szOtCGLeF1amhTUcNTkHTWd7rISOTos4X-IofYxDxy7LceSsolvttQI~0Uu6ZUttDFDeMWBsTjG3DPKRSEzeRHsrKO70ALUXTEfIWi4FzaeH81hBHFB2AIVSQKy2osU4KZDKT21CljVUHP3A0~bwTqakNA9QoeovgU73tQtN4OpEHw2KHoDNqD6FqGvywpzIAtIxh71u1MtfDhgtizeNe2Us05cCMaeZTGKU~Y6nPuVg__" alt="Waffle Image 3">
-    <!-- Image 4 -->
-    <img src="https://media-hosting.imagekit.io/4fcfa07d77d043e8/4.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hgYUUU2XgCKrl9Lqnwl9-TIZiFgzJdnL1R3mkH-uPcJjIPdApNp~8bWbFddnkV5klTTMqVz~AEUtBpYE5LLbJduQlO1ECJUN4hgZA3BqX0ROOCxtYMHdOKEn~wj8C4DDmzz8uRQ4bb5TITwfKB9NGzqcrmjIH7iV-~mTgh2kf6G01QdA6EjYEfe6wpgBQggNh~0YeQpn3eXDGnMK7bflD66nlccjPOC7TFG~oO2lifCklSGG2mAaDNKNqB9FDwxb4wDHeOdmjK6eFHIqWp2~WlsyQRsfShpYjcvJyj0XbTAtWwWE68AYqmpcW4AX~znbPs7OMLCpiXJ77~6Redqm0g__" alt="Waffle Image 4">
+    <h1>🙏</h1>
+    <img src="https://iili.io/3V0H9WB.png" alt="Image 1">
+    <img src="https://iili.io/3V0nyzX.md.png" alt="Image 2">
+    <img src="https://media-hosting.imagekit.io/6fde1a84ac1f49bb/3.png?Expires=1840224471&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TwfVTs~bkBvUJvQOv5pTOuRMokzPG9CpX7vxVV4~5jqEj8ICcLdnp3bFk-i1XulhOLGcM4x0CvYCS4w8EJVwClIKFzfbJQT-KH8z24t--4szOtCGLeF1amhTUcNTkHTWd7rISOTos4X-IofYxDxy7LceSsolvttQI~0Uu6ZUttDFDeMWBsTjG3DPKRSEzeRHsrKO70ALUXTEfIWi4FzaeH81hBHFB2AIVSQKy2osU4KZDKT21CljVUHP3A0~bwTqakNA9QoeovgU73tQtN4OpEHw2KHoDNqD6FqGvywpzIAtIxh71u1MtfDhgtizeNe2Us05cCMaeZTGKU~Y6nPuVg__" alt="Image 3">
+    <img src="https://iili.io/3V0TCaj.png" alt="Image 4">
   </div>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/7380/7380658.png" alt="Corner Icon" class="corner-img">
 </body>
 </html>
